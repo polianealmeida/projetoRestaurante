@@ -8,7 +8,7 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 @Service
 public class PedidoService {
 
-	@HystrixCommand(fallbackMethod = "fecharPedidoFallback", threadPoolKey = "fecharPedidoThreadPool")
+	@HystrixCommand(fallbackMethod = "fecharPedidoFallback")
 	public void fecharPedido(ItensPedidoDTO itensPedido) {
 		// TODO Auto-generated method stub
 

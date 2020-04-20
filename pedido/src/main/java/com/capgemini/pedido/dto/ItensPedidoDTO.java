@@ -2,15 +2,15 @@ package com.capgemini.pedido.dto;
 
 public class ItensPedidoDTO {
 
-	private String codigo;
+	private Integer codigo;
 	private String idItemCardapio;
 	private String quantidade;
 
-	public String getCodigo() {
+	public Integer getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(String codigo) {
+	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
 

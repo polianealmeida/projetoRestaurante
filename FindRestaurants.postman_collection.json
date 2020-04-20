@@ -134,7 +134,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"id\":\"0ada6129-cb4e-48ab-bf2f-67db33fc8b57\",\n    \"codigo\": \"1222\",\n    \"descricao\": \"Sushi Japan\",\n    \"endereco\": \"Uma rua qualquer, 88\",\n    \"longitude\": 41.40338,\n    \"latitude\": 2.17403,\n    \"tipoComida\": {\n    \t\"id\":\"11221222\"\n    }\n}",
+							"raw": "{\n\t\"id\":\"db2dd6ec-303e-4417-805a-6d0a098332f9\",\n    \"codigo\": \"1222\",\n    \"descricao\": \"Sushi Japan\",\n    \"endereco\": \"Uma rua qualquer, 88\",\n    \"longitude\": 41.40338,\n    \"latitude\": 2.17403,\n    \"tipoComida\": {\n    \t\"id\":\"11221222\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -202,7 +202,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"itensPedido\":\t[\n\t\t{\n\t\t\t\"idItemCardapio\":1234,\n\t\t\t\"quantidade\":3\n\t\t},\n\t\t{\n\t\t\t\"idItemCardapio\":4321,\n\t\t\t\"quantidade\":4\n\t\t},\n\t]\n}",
+							"raw": "{\n\t\"itensPedido\":[\n\t\t{\n\t\t\t\"idItemCardapio\":1234,\n\t\t\t\"quantidade\":3\n\t\t},\n\t\t{\n\t\t\t\"idItemCardapio\":4321,\n\t\t\t\"quantidade\":4\n\t\t}\n\t]\n}",
 							"options": {
 								"raw": {
 									"language": "javascript"

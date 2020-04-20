@@ -21,7 +21,7 @@ public class RestauranteController {
 	@Autowired
 	private RestauranteService restauranteService;
 
-	@RequestMapping("/{nome}")
+	@RequestMapping("/{descricao}")
 	public List<RestauranteDTO> buscarRestaruantePorDescricao(@PathVariable String descricao) {
 		return restauranteService.buscarRestaruantePorDescricao(descricao);
 	}

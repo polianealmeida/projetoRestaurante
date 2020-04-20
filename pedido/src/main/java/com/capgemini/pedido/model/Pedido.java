@@ -16,7 +16,7 @@ public class Pedido {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(updatable = false, nullable = false)
-	private String codigo;
+	private Integer codigo;
 
 	@Column(name = "id_item_cardapio")
 	private String idItemCardapio;
@@ -26,13 +26,13 @@ public class Pedido {
 
 	@Column(nullable = false)
 	@Enumerated(EnumType.STRING)
-	private String status;
+	private StatusPedidoEnum status;
 
-	public String getCodigo() {
+	public Integer getCodigo() {
 		return codigo;
 	}
 
-	public void setCodigo(String codigo) {
+	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
 
@@ -52,11 +52,11 @@ public class Pedido {
 		this.quantidade = quantidade;
 	}
 
-	public String getStatus() {
+	public StatusPedidoEnum getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(StatusPedidoEnum status) {
 		this.status = status;
 	}
 
