@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "441f4fc4-ec59-4765-a3c4-b787ef85dc6c",
+		"name": "FindRestaurants",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Restaurante",
+			"item": [
+				{
+					"name": "BusaRestaurantesPorDescricao",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/restaurante/ja",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"restaurante",
+								"ja"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BusaRestaurantesPorIdTipoComida",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/restaurante/tipo-comida/11221222",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"restaurante",
+								"tipo-comida",
+								"11221222"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BusaRestaurantesPorGeolocalizacao",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"latitude\":-19.91854613798159,\n\t\"longitude\":-43.9636788912455\n}",
+							"options": {
+								"raw": {
+									"language": "javascript"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/restaurante/geolocalizacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"restaurante",
+								"geolocalizacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadatrarRestuarante",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"codigo\": \"1\",\n    \"descricao\": \"Sushi Japan\",\n    \"endereco\": \"Uma rua qualquer, 88\",\n    \"longitude\": 41.40338,\n    \"latitude\": 2.17403,\n    \"tipoComida\": {\n    \t\"id\":\"11221222\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/restaurante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"restaurante"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarRestuarante",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\":\"0ada6129-cb4e-48ab-bf2f-67db33fc8b57\",\n    \"codigo\": \"1222\",\n    \"descricao\": \"Sushi Japan\",\n    \"endereco\": \"Uma rua qualquer, 88\",\n    \"longitude\": 41.40338,\n    \"latitude\": 2.17403,\n    \"tipoComida\": {\n    \t\"id\":\"11221222\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/restaurante",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"restaurante"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "CadatrarUsuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AutenticarUsuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "FecharPedido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"itensPedido\":\t[\n\t\t{\n\t\t\t\"idItemCardapio\":1234,\n\t\t\t\"quantidade\":3\n\t\t},\n\t\t{\n\t\t\t\"idItemCardapio\":4321,\n\t\t\t\"quantidade\":4\n\t\t},\n\t]\n}",
+							"options": {
+								"raw": {
+									"language": "javascript"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8083/pedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8083",
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RealizarPagamento",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Server",
+			"item": [
+				{
+					"name": "Eureka-apps",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8761/eureka/apps",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8761",
+							"path": [
+								"eureka",
+								"apps"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Config",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/pedido/defaut",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"pedido",
+								"defaut"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
